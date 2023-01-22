@@ -348,7 +348,6 @@ const navigation = [
     icon: 'tabler:brand-tabler'
   },
   {
-    
     title: 'Cards',
     icon: 'tabler:id',
     children: [
@@ -367,10 +366,6 @@ const navigation = [
       {
         title: 'Widgets',
         path: '/ui/cards/widgets'
-      },
-      {
-        title: 'Actions',
-        path: '/ui/cards/actions'
       }
     ]
   },
@@ -455,7 +450,7 @@ const navigation = [
       {
         title: 'More',
         path: '/components/more'
-      },
+      }
     ]
   },
   {
@@ -516,7 +511,7 @@ const navigation = [
       {
         title: 'Input Mask',
         path: '/forms/form-elements/input-mask'
-      },
+      }
     ]
   },
   {

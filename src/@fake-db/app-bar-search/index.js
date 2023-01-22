@@ -416,13 +416,6 @@ const searchData = [
     category: 'userInterface'
   },
   {
-    id: 60,
-    url: '/ui/cards/actions',
-    icon: 'tabler:mouse-2',
-    title: 'Card Actions',
-    category: 'userInterface'
-  },
-  {
     id: 61,
     url: '/components/accordion',
     icon: 'tabler:fold',

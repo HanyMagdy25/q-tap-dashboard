@@ -14,7 +14,6 @@ import TableContainer from '@mui/material/TableContainer'
 import Icon from 'src/@core/components/icon'
 
 // Component Imports
-import CardActionAll from 'src/views/ui/cards/actions/CardActionAll'
 import CardActionClose from 'src/views/ui/cards/actions/CardActionClose'
 import CardActionRefresh from 'src/views/ui/cards/actions/CardActionRefresh'
 import CardActionCollapse from 'src/views/ui/cards/actions/CardActionCollapse'
@@ -81,7 +80,7 @@ const CardActions = () => {
         <CardActionClose />
       </Grid>
       <Grid item xs={12} md={6}>
-        <CardActionAll />
+        {/* <CardActionAll /> */}
       </Grid>
     </Grid>
   )

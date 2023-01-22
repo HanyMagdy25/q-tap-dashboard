@@ -376,52 +376,6 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
-"@fullcalendar/bootstrap5@6.0.2":
-  "integrity" "sha512-WehcfW/U5lCG+cjTjbz5W2yjxN9zqz/mD6xqQ5OWfVqWe6/aHSDA+rpbyUP7LqpNjGyPbS9pz76y65bpB6CP/A=="
-  "resolved" "https://registry.npmjs.org/@fullcalendar/bootstrap5/-/bootstrap5-6.0.2.tgz"
-  "version" "6.0.2"
-
-"@fullcalendar/common@5.11.3":
-  "integrity" "sha512-welVwyfQOXQQGfDwBMSfYEPbiO1cPfUD+C7jd3ZoweJR+dSO11ddFugxIQ7dGfABAGZ63oq/+LW9FsmAJezVNg=="
-  "resolved" "https://registry.npmjs.org/@fullcalendar/common/-/common-5.11.3.tgz"
-  "version" "5.11.3"
-  dependencies:
-    "tslib" "^2.1.0"
-
-"@fullcalendar/core@6.0.2":
-  "integrity" "sha512-mpJ+8l2t6b98umrRG2FfDnMqEr0Z+wNT2SjY7H49V3wcj4oe3gwuty8GBYHG/vgxS+DXR/NcEvW1CsMQh4Cr/A=="
-  "resolved" "https://registry.npmjs.org/@fullcalendar/core/-/core-6.0.2.tgz"
-  "version" "6.0.2"
-  dependencies:
-    "preact" "^10.0.5"
-
-"@fullcalendar/daygrid@~6.0.2", "@fullcalendar/daygrid@6.0.2":
-  "integrity" "sha512-OoHo+HbKmunq2hy5K6T2390DmSwXIENxHBeKFPlUXHK48xD/zXQI3N1zRlZRd83+Yrq+vDF6l8ObO9PMu2leJw=="
-  "resolved" "https://registry.npmjs.org/@fullcalendar/daygrid/-/daygrid-6.0.2.tgz"
-  "version" "6.0.2"
-
-"@fullcalendar/interaction@6.0.2":
-  "integrity" "sha512-RPWWCp6wdzVCc3XdcBUZuduFGX/mB8OrV2xBF5wrGFbGAZE3OYuEPcVnLF1SsC+pJVntG6z1fL5aQ/OM8nul9Q=="
-  "resolved" "https://registry.npmjs.org/@fullcalendar/interaction/-/interaction-6.0.2.tgz"
-  "version" "6.0.2"
-
-"@fullcalendar/list@6.0.2":
-  "integrity" "sha512-xeTNqGgQvW6u2isX8P3IV8w19Jzn/4Fs6nNc5tiEs0WJ6zd1bYEfruzDL0WPMMmcydgpkv0YHTLMwlnlFeq9+g=="
-  "resolved" "https://registry.npmjs.org/@fullcalendar/list/-/list-6.0.2.tgz"
-  "version" "6.0.2"
-
-"@fullcalendar/react@6.0.2":
-  "integrity" "sha512-/rL21DcgD3CGwrB/0zpqJxcWoK2rb/AF7rcuvwgjsmUCd7Xv9/syY7yuHbhIw3/WnFE3Qz7KL3u8vEjILwlwiA=="
-  "resolved" "https://registry.npmjs.org/@fullcalendar/react/-/react-6.0.2.tgz"
-  "version" "6.0.2"
-
-"@fullcalendar/timegrid@6.0.2":
-  "integrity" "sha512-wl6AWL7ZJhSEV/0SSg8ePeLdeNQD/ZuogncOzfpdYRBv3M4G7hKrGA5Gc9Exz7MrbC/0T9xnWVJvq8i2lK2U5g=="
-  "resolved" "https://registry.npmjs.org/@fullcalendar/timegrid/-/timegrid-6.0.2.tgz"
-  "version" "6.0.2"
-  dependencies:
-    "@fullcalendar/daygrid" "~6.0.2"
-
 "@hookform/resolvers@2.9.10":
   "integrity" "sha512-JIL1DgJIlH9yuxcNGtyhsWX/PgNltz+5Gr6+8SX9fhXc/hPbEIk6wPI82nhgvp3uUb6ZfAM5mqg/x7KR7NAb+A=="
   "resolved" "https://registry.npmjs.org/@hookform/resolvers/-/resolvers-2.9.10.tgz"
@@ -461,7 +415,7 @@
     "@iconify/types" "*"
     "pathe" "^1.0.0"
 
-"@iconify/react@4.0.1":
+"@iconify/react@^4.0.1":
   "integrity" "sha512-/DBJqh5K7W4f+d4kpvyJa/OTpVa3GfgrE9bZFAKP0vIWDr0cvVU9MVvbbkek216w9nLQhpJY/FeJtc6izB1PHw=="
   "resolved" "https://registry.npmjs.org/@iconify/react/-/react-4.0.1.tgz"
   "version" "4.0.1"
@@ -3017,7 +2971,21 @@
   "resolved" "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz"
   "version" "1.2.7"
 
-"minipass@^3.0.0", "minipass@^3.3.5", "minipass@^4.0.0":
+"minipass@^3.0.0":
+  "integrity" "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw=="
+  "resolved" "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz"
+  "version" "3.3.6"
+  dependencies:
+    "yallist" "^4.0.0"
+
+"minipass@^3.3.5":
+  "integrity" "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw=="
+  "resolved" "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz"
+  "version" "3.3.6"
+  dependencies:
+    "yallist" "^4.0.0"
+
+"minipass@^4.0.0":
   "integrity" "sha512-g2Uuh2jEKoht+zvO6vJqXmYpflPqzRBT+Th2h01DKh5z7wbY/AZ2gCQ78cP70YoHPyFdY30YBV5WxgLOEwOykw=="
   "resolved" "https://registry.npmjs.org/minipass/-/minipass-4.0.0.tgz"
   "version" "4.0.0"
@@ -3351,11 +3319,6 @@
     "nanoid" "^3.3.4"
     "picocolors" "^1.0.0"
     "source-map-js" "^1.0.2"
-
-"preact@^10.0.5":
-  "integrity" "sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg=="
-  "resolved" "https://registry.npmjs.org/preact/-/preact-10.11.3.tgz"
-  "version" "10.11.3"
 
 "prelude-ls@^1.2.1":
   "integrity" "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="
@@ -4099,7 +4062,7 @@
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   "version" "1.14.1"
 
-"tslib@^2.1.0", "tslib@^2.4.0":
+"tslib@^2.4.0":
   "integrity" "sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.4.1.tgz"
   "version" "2.4.1"

@@ -29,15 +29,11 @@ const navigation = () => {
       path: '/apps/email'
     },
     {
-      title: 'Chat',
-      icon: 'tabler:messages',
-      path: '/apps/chat'
+      title: 'Add Card',
+      icon: 'tabler:id',
+      path: '/apps/addcard'
     },
-    {
-      title: 'Calendar',
-      icon: 'tabler:calendar',
-      path: '/apps/calendar'
-    },
+
     {
       title: 'Invoice',
       icon: 'tabler:file-dollar',
@@ -95,20 +91,7 @@ const navigation = () => {
         }
       ]
     },
-    {
-      title: 'Roles & Permissions',
-      icon: 'tabler:settings',
-      children: [
-        {
-          title: 'Roles',
-          path: '/apps/roles'
-        },
-        {
-          title: 'Permissions',
-          path: '/apps/permissions'
-        }
-      ]
-    },
+
     {
       title: 'Pages',
       icon: 'tabler:file',
@@ -346,7 +329,6 @@ const navigation = () => {
       icon: 'tabler:brand-tabler'
     },
     {
-      
       title: 'Cards',
       icon: 'tabler:id',
       children: [
@@ -365,10 +347,6 @@ const navigation = () => {
         {
           title: 'Widgets',
           path: '/ui/cards/widgets'
-        },
-        {
-          title: 'Actions',
-          path: '/ui/cards/actions'
         }
       ]
     },
@@ -453,7 +431,7 @@ const navigation = () => {
         {
           title: 'More',
           path: '/components/more'
-        },
+        }
       ]
     },
     {
@@ -514,7 +492,7 @@ const navigation = () => {
         {
           title: 'Input Mask',
           path: '/forms/form-elements/input-mask'
-        },
+        }
       ]
     },
     {
