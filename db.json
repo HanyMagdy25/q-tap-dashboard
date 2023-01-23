@@ -1,0 +1,32 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
+        },
+        {
+            "id": 2,
+            "title": "json-server",
+            "author": "typicode"
+        },
+        {
+            "id": 70,
+            "title": "hhhhhh",
+            "description": "hhhhh\n",
+            "userId": 1
+        },
+        {
+            "id": 358,
+            "title": "ttttt",
+            "description": "ttttt",
+            "userId": 1
+        },
+        {
+            "id": 449,
+            "title": "ooooooo",
+            "description": "oooooo",
+            "userId": 1
+        }
+    ]
+}
