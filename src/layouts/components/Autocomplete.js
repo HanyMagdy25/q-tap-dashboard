@@ -119,11 +119,6 @@ const defaultSuggestionsData = [
         link: '/forms/form-elements/autocomplete'
       },
       {
-        icon: 'tabler:layout-grid',
-        suggestion: 'Table',
-        link: '/tables/mui'
-      },
-      {
         icon: 'tabler:calendar-event',
         suggestion: 'Date Pickers',
         link: '/forms/form-elements/pickers'

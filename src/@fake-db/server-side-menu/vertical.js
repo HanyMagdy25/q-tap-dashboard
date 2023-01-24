@@ -530,16 +530,6 @@ const navigation = [
     icon: 'tabler:text-wrap-disabled'
   },
   {
-    title: 'Table',
-    icon: 'tabler:table',
-    path: '/tables/mui'
-  },
-  {
-    title: 'Mui DataGrid',
-    icon: 'tabler:layout-grid',
-    path: '/tables/data-grid'
-  },
-  {
     sectionTitle: 'Charts & Misc'
   },
   {

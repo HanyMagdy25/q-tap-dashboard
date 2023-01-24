@@ -15,14 +15,14 @@ import CustomAvatar from 'src/@core/components/mui/avatar'
 const data = [
   {
     stats: '230k',
-    title: 'Sales',
+    title: 'Visitors',
     color: 'primary',
     icon: 'tabler:chart-pie-2'
   },
   {
     color: 'info',
     stats: '8.549k',
-    title: 'Customers',
+    title: 'Shares',
     icon: 'tabler:users'
   },
   {
@@ -34,7 +34,7 @@ const data = [
   {
     stats: '$9745',
     color: 'success',
-    title: 'Revenue',
+    title: 'Click to Call',
     icon: 'tabler:currency-dollar'
   }
 ]
@@ -59,7 +59,7 @@ const CardStatisticsTransactions = () => {
   return (
     <Card>
       <CardHeader
-        title='Transactions'
+        title='Statistics'
         sx={{ '& .MuiCardHeader-action': { m: 0, alignSelf: 'center' } }}
         action={
           <Typography variant='body2' sx={{ color: 'text.disabled' }}>

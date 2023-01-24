@@ -4,11 +4,8 @@ import Grid from '@mui/material/Grid'
 // ** Demo Component Imports
 import CrmSessions from 'src/views/dashboards/crm/CrmSessions'
 import CrmRevenueGrowth from 'src/views/dashboards/crm/CrmRevenueGrowth'
-import CrmBrowserStates from 'src/views/dashboards/crm/CrmBrowserStates'
 import CrmProjectStatus from 'src/views/dashboards/crm/CrmProjectStatus'
 import CrmActiveProjects from 'src/views/dashboards/crm/CrmActiveProjects'
-import CrmLastTransaction from 'src/views/dashboards/crm/CrmLastTransaction'
-import CrmActivityTimeline from 'src/views/dashboards/crm/CrmActivityTimeline'
 import CrmSalesWithAreaChart from 'src/views/dashboards/crm/CrmSalesWithAreaChart'
 import CrmSalesWithRadarChart from 'src/views/dashboards/crm/CrmSalesWithRadarChart'
 import CrmEarningReportsWithTabs from 'src/views/dashboards/crm/CrmEarningReportsWithTabs'
@@ -59,19 +56,10 @@ const CrmDashboard = () => {
           <CrmSalesWithRadarChart />
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
-          <CrmBrowserStates />
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
           <CrmProjectStatus />
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <CrmActiveProjects />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <CrmLastTransaction />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <CrmActivityTimeline />
         </Grid>
       </Grid>
     </ApexChartWrapper>

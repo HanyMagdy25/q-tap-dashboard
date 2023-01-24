@@ -13,11 +13,6 @@ const navigation = () => {
           icon: 'tabler:device-analytics',
           title: 'CRM',
           path: '/dashboards/crm'
-        },
-        {
-          icon: 'tabler:shopping-cart',
-          title: 'eCommerce',
-          path: '/dashboards/ecommerce'
         }
       ]
     },
@@ -515,16 +510,6 @@ const navigation = () => {
           title: 'Form Wizard',
           path: '/forms/form-wizard',
           icon: 'tabler:text-wrap-disabled'
-        },
-        {
-          title: 'Table',
-          icon: 'tabler:table',
-          path: '/tables/mui'
-        },
-        {
-          title: 'Mui DataGrid',
-          icon: 'tabler:layout-grid',
-          path: '/tables/data-grid'
         }
       ]
     },

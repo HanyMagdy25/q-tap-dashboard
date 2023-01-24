@@ -540,16 +540,6 @@ const navigation = [
         title: 'Form Wizard',
         path: '/forms/form-wizard',
         icon: 'tabler:text-wrap-disabled'
-      },
-      {
-        title: 'Table',
-        icon: 'tabler:table',
-        path: '/tables/mui'
-      },
-      {
-        title: 'Mui DataGrid',
-        icon: 'tabler:layout-grid',
-        path: '/tables/data-grid'
       }
     ]
   },
