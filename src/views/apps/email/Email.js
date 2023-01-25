@@ -15,7 +15,6 @@ import { useSettings } from 'src/@core/hooks/useSettings'
 // ** Email App Component Imports
 import MailLog from 'src/views/apps/email/MailLog'
 import SidebarLeft from 'src/views/apps/email/SidebarLeft'
-import ComposePopup from 'src/views/apps/email/ComposePopup'
 
 // ** Actions
 import {
@@ -113,12 +112,6 @@ const EmailAppLayout = ({ folder, label }) => {
         setMailDetailsOpen={setMailDetailsOpen}
         handleSelectAllMail={handleSelectAllMail}
         handleLeftSidebarToggle={handleLeftSidebarToggle}
-      />
-      <ComposePopup
-        mdAbove={mdAbove}
-        composeOpen={composeOpen}
-        composePopupWidth={composePopupWidth}
-        toggleComposeOpen={toggleComposeOpen}
       />
     </Box>
   )

@@ -374,13 +374,6 @@ const searchData = [
     category: 'appsPages'
   },
   {
-    id: 54,
-    url: '/ui/typography',
-    icon: 'tabler:typography',
-    title: 'Typography',
-    category: 'userInterface'
-  },
-  {
     id: 55,
     url: '/ui/icons',
     icon: 'tabler:brand-tabler',
@@ -493,13 +486,6 @@ const searchData = [
     category: 'userInterface'
   },
   {
-    id: 72,
-    url: '/components/ratings',
-    icon: 'tabler:star',
-    title: 'Ratings',
-    category: 'userInterface'
-  },
-  {
     id: 73,
     url: '/components/snackbar',
     icon: 'tabler:message-dots',
@@ -532,13 +518,6 @@ const searchData = [
     url: '/components/toast',
     icon: 'tabler:bell',
     title: 'Toast',
-    category: 'userInterface'
-  },
-  {
-    id: 78,
-    url: '/components/tree-view',
-    icon: 'tabler:git-merge',
-    title: 'Tree View',
     category: 'userInterface'
   },
   {

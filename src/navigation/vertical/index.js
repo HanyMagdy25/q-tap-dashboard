@@ -315,11 +315,6 @@ const navigation = () => {
       sectionTitle: 'User Interface'
     },
     {
-      title: 'Typography',
-      icon: 'tabler:typography',
-      path: '/ui/typography'
-    },
-    {
       title: 'Icons',
       path: '/ui/icons',
       icon: 'tabler:brand-tabler'
@@ -397,10 +392,6 @@ const navigation = () => {
           path: '/components/pagination'
         },
         {
-          title: 'Ratings',
-          path: '/components/ratings'
-        },
-        {
           title: 'Snackbar',
           path: '/components/snackbar'
         },
@@ -419,10 +410,6 @@ const navigation = () => {
         {
           title: 'Toasts',
           path: '/components/toast'
-        },
-        {
-          title: 'Tree View',
-          path: '/components/tree-view'
         },
         {
           title: 'More',

@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 // ** MUI Import
 import Grid from '@mui/material/Grid'
 
@@ -7,8 +9,19 @@ import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 import CardOfDetails from 'src/views/dashboards/analytics/CardOfDetails'
 import CardStatisticsTransactions from 'src/views/ui/cards/statistics/CardStatisticsTransactions'
 import ApexLineChart from 'src/views/charts/apex-charts/ApexLineChart'
+import CardAppleWatch from 'src/views/ui/cards/basic/CardAppleWatch'
 
-const AnalyticsDashboard = () => {
+const url_main = 'http://q-tap-dashboard.technomasrsystems.com'
+
+const AnalyticsDashboard = ({ productsData }) => {
+  const [tokenQTap, setTokenQTap] = useState(null)
+
+  useEffect(() => {
+    setTokenQTap(localStorage.getItem('token-q-tap') ? JSON.parse(localStorage.getItem('token-q-tap')) : null)
+  }, [])
+
+  console.log(productsData)
+
   return (
     <ApexChartWrapper>
       <KeenSliderWrapper>
@@ -26,8 +39,38 @@ const AnalyticsDashboard = () => {
           </Grid>
         </Grid>
       </KeenSliderWrapper>
+      <KeenSliderWrapper>
+        <h2>Store</h2>
+        <Grid container spacing={6}>
+          {productsData.data.map((item, index) => (
+            <Grid key={index} item xs={12} sm={6} md={4}>
+              {/* <CardAppleWatch /> */}
+              <CardAppleWatch item={item} />
+            </Grid>
+          ))}
+        </Grid>
+      </KeenSliderWrapper>
     </ApexChartWrapper>
   )
 }
 
 export default AnalyticsDashboard
+
+export async function getStaticProps() {
+  const productsData = await fetch(`${url_main}/api/products`, {
+    headers: {
+      'Content-Type': 'application/json',
+      lang: 'en'
+    }
+  }).then(res => res.json())
+
+  // const cardsData = await fetch('https://www.jsonkeeper.com/b/VHHT').then(res => res.json())
+
+  return {
+    props: {
+      productsData
+
+      // cardsData
+    }
+  }
+}

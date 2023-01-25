@@ -5,18 +5,16 @@ import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 
-const CardAppleWatch = () => {
+const CardAppleWatch = ({ item }) => {
   return (
     <Card>
-      <CardMedia sx={{ height: '9.375rem' }} image='/images/cards/watch-on-hand.jpg' />
+      <CardMedia sx={{ height: '18.375rem' }} image={item.image} />
       <CardContent sx={{ p: theme => `${theme.spacing(3, 5.25, 4)} !important` }}>
         <Typography variant='h6' sx={{ mb: 2 }}>
-          Apple Watch
+          {item.title}
         </Typography>
-        <Typography sx={{ mb: 2 }}>$249.40</Typography>
-        <Typography variant='body2'>
-          3.1GHz 6-core 10th-generation Intel Core i5 processor, Turbo Boost up to 4.5GHz
-        </Typography>
+        <Typography sx={{ mb: 2 }}>LE {item.price}</Typography>
+        <Typography variant='body2'>{item.description}</Typography>
       </CardContent>
       <Button variant='contained' sx={{ py: 2.5, width: '100%', borderTopLeftRadius: 0, borderTopRightRadius: 0 }}>
         Add To Cart

@@ -10,7 +10,6 @@ import CardSupport from 'src/views/ui/cards/basic/CardSupport'
 import CardTwitter from 'src/views/ui/cards/basic/CardTwitter'
 import CardFacebook from 'src/views/ui/cards/basic/CardFacebook'
 import CardLinkedIn from 'src/views/ui/cards/basic/CardLinkedIn'
-import CardAppleWatch from 'src/views/ui/cards/basic/CardAppleWatch'
 import CardMembership from 'src/views/ui/cards/basic/CardMembership'
 import CardInfluencer from 'src/views/ui/cards/basic/CardInfluencer'
 import CardNavigation from 'src/views/ui/cards/basic/CardNavigation'
@@ -41,7 +40,8 @@ const CardBasic = () => {
         <CardHorizontalRatings />
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
-        <CardAppleWatch />
+        {/* <CardAppleWatch /> */}
+        THIS IS IN HOME PAGE
       </Grid>
       <Grid item xs={12} md={8}>
         <CardMembership />

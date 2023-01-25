@@ -303,69 +303,8 @@ const MailLog = props => {
   return (
     <Box sx={{ width: '100%', overflow: 'hidden', position: 'relative', '& .ps__rail-y': { zIndex: 5 } }}>
       <Box sx={{ height: '100%', backgroundColor: 'background.paper' }}>
-        <Box sx={{ px: 5, py: 3.75 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-            {lgAbove ? null : (
-              <IconButton onClick={handleLeftSidebarToggle} sx={{ mr: 1, ml: -2 }}>
-                <Icon icon='tabler:menu-2' fontSize={20} />
-              </IconButton>
-            )}
-            <Input
-              value={query}
-              placeholder='Search mail'
-              onChange={e => setQuery(e.target.value)}
-              sx={{ width: '100%', '&:before, &:after': { display: 'none' } }}
-              startAdornment={
-                <InputAdornment position='start' sx={{ color: 'text.disabled' }}>
-                  <Icon icon='tabler:search' fontSize='1.375rem' />
-                </InputAdornment>
-              }
-            />
-          </Box>
-        </Box>
         <Divider sx={{ m: '0 !important' }} />
-        <Box sx={{ py: 2, px: { xs: 2.5, sm: 5 } }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              {store && store.mails && store.selectedMails ? (
-                <Checkbox
-                  onChange={e => dispatch(handleSelectAllMail(e.target.checked))}
-                  checked={(store.mails.length && store.mails.length === store.selectedMails.length) || false}
-                  indeterminate={
-                    !!(
-                      store.mails.length &&
-                      store.selectedMails.length &&
-                      store.mails.length !== store.selectedMails.length
-                    )
-                  }
-                />
-              ) : null}
 
-              {store && store.selectedMails.length && store.mails && store.mails.length ? (
-                <Fragment>
-                  {routeParams && routeParams.folder !== 'trash' ? (
-                    <IconButton onClick={handleMoveToTrash}>
-                      <Icon icon='tabler:trash' />
-                    </IconButton>
-                  ) : null}
-                  <IconButton onClick={() => handleReadMail(store.selectedMails, false)}>
-                    <Icon icon='tabler:mail-opened' />
-                  </IconButton>
-                  <OptionsMenu leftAlignMenu options={handleFoldersMenu()} icon={<Icon icon='tabler:folder' />} />
-                  <OptionsMenu leftAlignMenu options={handleLabelsMenu()} icon={<Icon icon='tabler:tag' />} />
-                </Fragment>
-              ) : null}
-            </Box>
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <IconButton size='small' onClick={handleRefreshMailsClick}>
-                <Icon icon='tabler:reload' />
-              </IconButton>
-              <IconButton size='small'>
-                <Icon icon='tabler:dots-vertical' />
-              </IconButton>
-            </Box>
-          </Box>
-        </Box>
         <Divider sx={{ m: '0 !important' }} />
         <Box sx={{ p: 0, position: 'relative', overflowX: 'hidden', height: 'calc(100% - 7.625rem)' }}>
           <ScrollWrapper hidden={hidden}>
@@ -393,19 +332,6 @@ const MailLog = props => {
                           onChange={() => dispatch(handleSelectMail(mail.id))}
                           checked={store.selectedMails.includes(mail.id) || false}
                         />
-                        <IconButton
-                          size='small'
-                          onClick={e => handleStarMail(e, mail.id, !mail.isStarred)}
-                          sx={{
-                            mr: { xs: 0, sm: 3 },
-                            color: mail.isStarred ? 'warning.main' : 'text.secondary',
-                            '& svg': {
-                              display: { xs: 'none', sm: 'block' }
-                            }
-                          }}
-                        >
-                          <Icon icon='tabler:star' />
-                        </IconButton>
                         <Avatar
                           alt={mail.from.name}
                           src={mail.from.avatar}
@@ -452,33 +378,11 @@ const MailLog = props => {
                             </IconButton>
                           </Tooltip>
                         ) : null}
-
-                        <Tooltip placement='top' title={mail.isRead ? 'Unread Mail' : 'Read Mail'}>
-                          <IconButton
-                            onClick={e => {
-                              e.stopPropagation()
-                              handleReadMail([mail.id], !mail.isRead)
-                            }}
-                          >
-                            <Icon icon={mailReadToggleIcon} />
-                          </IconButton>
-                        </Tooltip>
-                        <Tooltip placement='top' title='Move to Spam'>
-                          <IconButton
-                            onClick={e => {
-                              e.stopPropagation()
-                              handleFolderUpdate([mail.id], 'spam')
-                            }}
-                          >
-                            <Icon icon='tabler:alert-octagon' />
-                          </IconButton>
-                        </Tooltip>
                       </Box>
                       <Box
                         className='mail-info-right'
                         sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}
                       >
-                        <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>{renderMailLabels(mail.labels)}</Box>
                         <Typography
                           variant='body2'
                           sx={{ minWidth: '50px', textAlign: 'right', whiteSpace: 'nowrap', color: 'text.disabled' }}

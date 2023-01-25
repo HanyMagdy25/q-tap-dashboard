@@ -1,5 +1,6 @@
 // ** JWT import
 import jwt from 'jsonwebtoken'
+import { useEffect } from 'react'
 
 // ** Mock Adapter
 import mock from 'src/@fake-db/mock'
@@ -25,6 +26,14 @@ const users = [
     email: 'client@vuexy.com'
   }
 ]
+
+// useEffect(() => {
+//   setTokenQTap(
+//     localStorage.getItem("token-q-tap")
+//       ? JSON.parse(localStorage.getItem("token-q-tap"))
+//       : null
+//   );
+// }, []);
 
 // ! These two secrets should be in .env file and not in any other file
 const jwtConfig = {

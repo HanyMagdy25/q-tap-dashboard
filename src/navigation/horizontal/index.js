@@ -95,11 +95,6 @@ const navigation = () => {
       title: 'UI',
       children: [
         {
-          title: 'Typography',
-          icon: 'tabler:typography',
-          path: '/ui/typography'
-        },
-        {
           title: 'Cards',
           icon: 'tabler:id',
           children: [
@@ -170,10 +165,6 @@ const navigation = () => {
               path: '/components/pagination'
             },
             {
-              title: 'Ratings',
-              path: '/components/ratings'
-            },
-            {
               title: 'Snackbar',
               path: '/components/snackbar'
             },
@@ -192,10 +183,6 @@ const navigation = () => {
             {
               title: 'Toasts',
               path: '/components/toast'
-            },
-            {
-              title: 'Tree View',
-              path: '/components/tree-view'
             },
             {
               title: 'More',

@@ -84,11 +84,6 @@ const defaultSuggestionsData = [
     category: 'User Interface',
     suggestions: [
       {
-        icon: 'tabler:typography',
-        suggestion: 'Typography',
-        link: '/ui/typography'
-      },
-      {
         icon: 'tabler:browser',
         suggestion: 'Tabs',
         link: '/components/tabs'
