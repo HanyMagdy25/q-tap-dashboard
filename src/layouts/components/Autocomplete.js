@@ -35,7 +35,7 @@ const defaultSuggestionsData = [
     suggestions: [
       {
         icon: 'tabler:chart-pie-2',
-        suggestion: 'Analytics',
+        suggestion: 'All Cards',
         link: '/dashboards/analytics'
       },
       {
@@ -47,11 +47,6 @@ const defaultSuggestionsData = [
         icon: 'tabler:shopping-cart',
         suggestion: 'eCommerce',
         link: '/dashboards/ecommerce'
-      },
-      {
-        icon: 'tabler:users',
-        suggestion: 'User List',
-        link: '/apps/user/list'
       }
     ]
   },

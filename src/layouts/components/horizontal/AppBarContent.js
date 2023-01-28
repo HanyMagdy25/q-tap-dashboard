@@ -67,12 +67,7 @@ const shortcuts = [
     icon: 'tabler:file-invoice',
     subtitle: 'Manage Accounts'
   },
-  {
-    title: 'User App',
-    icon: 'tabler:users',
-    url: '/apps/user/list',
-    subtitle: 'Manage Users'
-  },
+
   {
     url: '/apps/roles',
     icon: 'tabler:lock',

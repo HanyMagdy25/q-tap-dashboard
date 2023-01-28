@@ -6,7 +6,7 @@ const navigation = () => {
       children: [
         {
           icon: 'tabler:chart-pie-2',
-          title: 'Analytics',
+          title: 'All Cards',
           path: '/dashboards/analytics'
         },
         {
@@ -58,31 +58,11 @@ const navigation = () => {
           icon: 'tabler:user',
           children: [
             {
-              title: 'List',
-              path: '/apps/user/list'
-            },
-            {
               title: 'View',
               children: [
                 {
-                  title: 'Account',
-                  path: '/apps/user/view/account'
-                },
-                {
                   title: 'Security',
                   path: '/apps/user/view/security'
-                },
-                {
-                  title: 'Billing & Plans',
-                  path: '/apps/user/view/billing-plan'
-                },
-                {
-                  title: 'Notifications',
-                  path: '/apps/user/view/notification'
-                },
-                {
-                  title: 'Connection',
-                  path: '/apps/user/view/connection'
                 }
               ]
             }
@@ -120,10 +100,6 @@ const navigation = () => {
           title: 'Components',
           icon: 'tabler:archive',
           children: [
-            {
-              title: 'Accordion',
-              path: '/components/accordion'
-            },
             {
               title: 'Alerts',
               path: '/components/alerts'
@@ -488,11 +464,7 @@ const navigation = () => {
           title: 'Form Layouts',
           path: '/forms/form-layouts'
         },
-        {
-          title: 'Form Validation',
-          path: '/forms/form-validation',
-          icon: 'tabler:checkbox'
-        },
+
         {
           title: 'Form Wizard',
           path: '/forms/form-wizard',
@@ -518,58 +490,6 @@ const navigation = () => {
           title: 'ChartJS',
           path: '/charts/chartjs',
           icon: 'tabler:chart-line'
-        }
-      ]
-    },
-    {
-      title: 'Others',
-      icon: 'tabler:dots',
-      children: [
-        {
-          path: '/acl',
-          action: 'read',
-          subject: 'acl-page',
-          icon: 'tabler:shield',
-          title: 'Access Control'
-        },
-        {
-          title: 'Menu Levels',
-          icon: 'tabler:menu-2',
-          children: [
-            {
-              title: 'Menu Level 2.1'
-            },
-            {
-              title: 'Menu Level 2.2',
-              children: [
-                {
-                  title: 'Menu Level 3.1'
-                },
-                {
-                  title: 'Menu Level 3.2'
-                }
-              ]
-            }
-          ]
-        },
-        {
-          title: 'Disabled Menu',
-          icon: 'tabler:eye-off',
-          disabled: true
-        },
-        {
-          title: 'Raise Support',
-          icon: 'tabler:lifebuoy',
-          externalLink: true,
-          openInNewTab: true,
-          path: 'https://pixinvent.ticksy.com/'
-        },
-        {
-          title: 'Documentation',
-          icon: 'tabler:file-text',
-          externalLink: true,
-          openInNewTab: true,
-          path: 'https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/documentation/'
         }
       ]
     }

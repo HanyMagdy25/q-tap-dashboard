@@ -6,7 +6,7 @@ const searchData = [
     id: 1,
     url: '/dashboards/analytics',
     icon: 'tabler:chart-pie-2',
-    title: 'Analytics Dashboard',
+    title: 'All Cards Dashboard',
     category: 'dashboards'
   },
   {
@@ -72,20 +72,7 @@ const searchData = [
     title: 'Invoice Add',
     category: 'appsPages'
   },
-  {
-    id: 11,
-    url: '/apps/user/list',
-    icon: 'tabler:users',
-    title: 'User List',
-    category: 'appsPages'
-  },
-  {
-    id: 12,
-    url: '/apps/user/view/account',
-    icon: 'tabler:user',
-    title: 'User View - Account',
-    category: 'appsPages'
-  },
+
   {
     id: 13,
     url: '/apps/user/view/security',
@@ -93,27 +80,7 @@ const searchData = [
     title: 'User View - Security',
     category: 'appsPages'
   },
-  {
-    id: 14,
-    url: '/apps/user/view/billing-plan',
-    icon: 'tabler:currency-dollar',
-    title: 'User View - Billing & Plans',
-    category: 'appsPages'
-  },
-  {
-    id: 15,
-    url: '/apps/user/view/notification',
-    icon: 'tabler:bell',
-    title: 'User View - Notification',
-    category: 'appsPages'
-  },
-  {
-    id: 16,
-    url: '/apps/user/view/connection',
-    icon: 'tabler:link',
-    title: 'User View - Connection',
-    category: 'appsPages'
-  },
+
   {
     id: 17,
     url: '/apps/roles',
@@ -373,13 +340,7 @@ const searchData = [
     title: 'Dialog Examples',
     category: 'appsPages'
   },
-  {
-    id: 55,
-    url: '/ui/icons',
-    icon: 'tabler:brand-tabler',
-    title: 'Icons',
-    category: 'userInterface'
-  },
+
   {
     id: 56,
     url: '/ui/cards/basic',
@@ -406,13 +367,6 @@ const searchData = [
     url: '/ui/cards/widgets',
     icon: 'tabler:chart-pie',
     title: 'Card Widgets',
-    category: 'userInterface'
-  },
-  {
-    id: 61,
-    url: '/components/accordion',
-    icon: 'tabler:fold',
-    title: 'Accordion',
     category: 'userInterface'
   },
   {
@@ -625,13 +579,7 @@ const searchData = [
     title: 'Form Layouts',
     category: 'formsTables'
   },
-  {
-    id: 94,
-    url: '/forms/form-validation',
-    icon: 'tabler:checkbox',
-    title: 'Form Validation',
-    category: 'formsTables'
-  },
+
   {
     id: 95,
     url: '/forms/form-wizard',
