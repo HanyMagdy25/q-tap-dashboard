@@ -17,7 +17,7 @@ const AnalyticsDashboard = ({ productsData }) => {
   const [tokenQTap, setTokenQTap] = useState(null)
 
   useEffect(() => {
-    setTokenQTap(localStorage.getItem('token-q-tap') ? JSON.parse(localStorage.getItem('token-q-tap')) : null)
+    setTokenQTap(localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : null)
   }, [])
 
   console.log(productsData)

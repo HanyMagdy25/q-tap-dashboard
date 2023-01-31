@@ -79,7 +79,7 @@ function Index() {
   }
 
   useEffect(() => {
-    setTokenQTap(localStorage.getItem('token-q-tap') ? JSON.parse(localStorage.getItem('token-q-tap')) : null)
+    setTokenQTap(localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : null)
   }, [])
 
   const handleCreateCard = e => {

@@ -91,10 +91,10 @@ const schema = yup.object().shape({
   password: yup.string().min(5).required()
 })
 
-const defaultValues = {
-  password: 'admin',
-  email: 'admin@vuexy.com'
-}
+// const defaultValues = {
+//   password: 'admin',
+//   email: 'admin@vuexy.com'
+// }
 
 const LoginPage = () => {
   const [rememberMe, setRememberMe] = useState(true)
@@ -145,6 +145,13 @@ const LoginPage = () => {
       email
     }
 
+    auth.login({ email, password, rememberMe }, () => {
+      setError('email', {
+        type: 'manual',
+        message: 'Email or Password is invalid'
+      })
+    })
+
     fetch(`${url_main}/api/user/login`, {
       method: 'POST',
 
@@ -161,7 +168,7 @@ const LoginPage = () => {
         if (res.status === true) {
           // setUserTokenQTap(res.user)
 
-          localStorage.setItem('token-q-tap', JSON.stringify(res))
+          localStorage.setItem('userData', JSON.stringify(res))
           window.location.href = '/dashboards/analytics'
         } else {
           setResponseFailed(true)

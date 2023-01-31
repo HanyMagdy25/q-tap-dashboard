@@ -31,6 +31,9 @@ import AuthGuard from 'src/@core/components/auth/AuthGuard'
 import GuestGuard from 'src/@core/components/auth/GuestGuard'
 import WindowWrapper from 'src/@core/components/window-wrapper'
 
+// ** Next Import
+import { useRouter } from 'next/router'
+
 // ** Spinner Import
 import Spinner from 'src/@core/components/spinner'
 
@@ -56,6 +59,7 @@ import 'src/iconify-bundle/icons-bundle-react'
 
 // ** Global css styles
 import '../../styles/globals.css'
+import { useEffect } from 'react'
 
 const clientSideEmotionCache = createEmotionCache()
 
@@ -86,6 +90,8 @@ const Guard = ({ children, authGuard, guestGuard }) => {
 const App = props => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
+  const router = useRouter()
+
   // Variables
   const contentHeightFixed = Component.contentHeightFixed ?? false
 
@@ -95,6 +101,20 @@ const App = props => {
   const authGuard = Component.authGuard ?? true
   const guestGuard = Component.guestGuard ?? false
   const aclAbilities = Component.acl ?? defaultACLObj
+
+  // const locat = window.location.pathname
+  useEffect(() => {
+    if (window.location.pathname === '/') {
+      // router.replace('/dashboards/analytics')
+      router.push({
+        pathname: '/dashboards/analytics'
+      })
+
+      // window.location.reload()
+    }
+
+    // console.log('window.location.pathname', window.location.pathname)
+  }, [router])
 
   return (
     <Provider store={store}>
