@@ -20,7 +20,7 @@ import { styled } from '@mui/material/styles'
 
 const url_main = 'https://q-tap-dashboard.technomasrsystems.com'
 
-function index() {
+function Index() {
   // To Get The Token
   const [tokenQTap, setTokenQTap] = useState(null)
 
@@ -252,4 +252,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

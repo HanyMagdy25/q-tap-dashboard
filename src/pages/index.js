@@ -20,7 +20,7 @@ export const getHomeRoute = role => {
 
 const Home = () => {
   // ** Hooks
-  const auth = useAuth()
+  // const auth = useAuth()
   const router = useRouter()
   useEffect(() => {
     if (auth.user && auth.user.role) {

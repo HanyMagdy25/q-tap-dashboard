@@ -44,6 +44,8 @@ import BlankLayout from 'src/@core/layouts/BlankLayout'
 // ** Demo Imports
 import FooterIllustrationsV2 from 'src/views/pages/auth/FooterIllustrationsV2'
 
+const url_main = 'https://q-tap-dashboard.technomasrsystems.com'
+
 // ** Styled Components
 const LoginIllustration = styled('img')(({ theme }) => ({
   zIndex: 2,
@@ -130,6 +132,43 @@ const LoginPage = () => {
   }
   const imageSource = skin === 'bordered' ? 'auth-v2-login-illustration-bordered' : 'auth-v2-login-illustration'
 
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  // My Test To Login as Q Tap Website
+
+  const handleLogin = e => {
+    e.preventDefault()
+
+    const blog = {
+      password,
+      email
+    }
+
+    fetch(`${url_main}/api/user/login`, {
+      method: 'POST',
+
+      // credentials: "include",
+      headers: {
+        'Content-Type': 'application/json',
+        lang: 'en'
+      },
+      body: JSON.stringify(blog)
+    })
+      .then(data => data.json())
+      .then(res => {
+        console.log('res', res)
+        if (res.status === true) {
+          // setUserTokenQTap(res.user)
+
+          localStorage.setItem('token-q-tap', JSON.stringify(res))
+          window.location.href = '/dashboards/analytics'
+        } else {
+          setResponseFailed(true)
+        }
+      })
+  }
+
   return (
     <Box className='content-right' sx={{ backgroundColor: 'background.paper' }}>
       {!hidden ? (
@@ -196,27 +235,26 @@ const LoginPage = () => {
                 Please sign-in to your account and start the adventure
               </Typography>
             </Box>
-            <Alert icon={false} sx={{ py: 3, mb: 6, ...bgColors.primaryLight, '& .MuiAlert-message': { p: 0 } }}>
+            {/* <Alert icon={false} sx={{ py: 3, mb: 6, ...bgColors.primaryLight, '& .MuiAlert-message': { p: 0 } }}>
               <Typography variant='body2' sx={{ mb: 2, color: 'primary.main' }}>
                 Admin: <strong>admin@vuexy.com</strong> / Pass: <strong>admin</strong>
               </Typography>
               <Typography variant='body2' sx={{ color: 'primary.main' }}>
                 Client: <strong>client@vuexy.com</strong> / Pass: <strong>client</strong>
               </Typography>
-            </Alert>
-            <form noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
+            </Alert> */}
+            <form noValidate autoComplete='off' onSubmit={handleLogin}>
               <FormControl fullWidth sx={{ mb: 4 }}>
                 <Controller
                   name='email'
                   control={control}
                   rules={{ required: true }}
-                  render={({ field: { value, onChange, onBlur } }) => (
+                  render={({ field: { onBlur } }) => (
                     <TextField
                       autoFocus
                       label='Email'
-                      value={value}
                       onBlur={onBlur}
-                      onChange={onChange}
+                      onChange={e => setEmail(e.target.value)}
                       error={Boolean(errors.email)}
                       placeholder='admin@vuexy.com'
                     />
@@ -232,12 +270,11 @@ const LoginPage = () => {
                   name='password'
                   control={control}
                   rules={{ required: true }}
-                  render={({ field: { value, onChange, onBlur } }) => (
+                  render={({ field: { onBlur } }) => (
                     <OutlinedInput
-                      value={value}
                       onBlur={onBlur}
                       label='Password'
-                      onChange={onChange}
+                      onChange={e => setPassword(e.target.value)}
                       id='auth-login-v2-password'
                       error={Boolean(errors.password)}
                       type={showPassword ? 'text' : 'password'}
@@ -286,35 +323,6 @@ const LoginPage = () => {
                     Create an account
                   </LinkStyled>
                 </Typography>
-              </Box>
-              <Divider
-                sx={{
-                  fontSize: '0.875rem',
-                  color: 'text.disabled',
-                  '& .MuiDivider-wrapper': { px: 6 },
-                  my: theme => `${theme.spacing(6)} !important`
-                }}
-              >
-                or
-              </Divider>
-              <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <IconButton href='/' component={Link} sx={{ color: '#497ce2' }} onClick={e => e.preventDefault()}>
-                  <Icon icon='mdi:facebook' />
-                </IconButton>
-                <IconButton href='/' component={Link} sx={{ color: '#1da1f2' }} onClick={e => e.preventDefault()}>
-                  <Icon icon='mdi:twitter' />
-                </IconButton>
-                <IconButton
-                  href='/'
-                  component={Link}
-                  onClick={e => e.preventDefault()}
-                  sx={{ color: theme => (theme.palette.mode === 'light' ? '#272727' : 'grey.300') }}
-                >
-                  <Icon icon='mdi:github' />
-                </IconButton>
-                <IconButton href='/' component={Link} sx={{ color: '#db4437' }} onClick={e => e.preventDefault()}>
-                  <Icon icon='mdi:google' />
-                </IconButton>
               </Box>
             </form>
           </Box>
