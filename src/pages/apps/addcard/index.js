@@ -18,7 +18,7 @@ import Select from '@mui/material/Select'
 import { Box } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
-const url_main = 'https://q-tap-dashboard.technomasrsystems.com'
+const url_main = 'https://qtap-dashboard.qutap.co/api'
 
 function Index() {
   // To Get The Token

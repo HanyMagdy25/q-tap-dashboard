@@ -44,7 +44,7 @@ import BlankLayout from 'src/@core/layouts/BlankLayout'
 // ** Demo Imports
 import FooterIllustrationsV2 from 'src/views/pages/auth/FooterIllustrationsV2'
 
-const url_main = 'https://q-tap-dashboard.technomasrsystems.com'
+const url_main = 'https://qtap-dashboard.qutap.co/api'
 
 // ** Styled Components
 const LoginIllustration = styled('img')(({ theme }) => ({
@@ -116,7 +116,6 @@ const LoginPage = () => {
     handleSubmit,
     formState: { errors }
   } = useForm({
-    defaultValues,
     mode: 'onBlur',
     resolver: yupResolver(schema)
   })

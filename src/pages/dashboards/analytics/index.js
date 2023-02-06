@@ -11,7 +11,7 @@ import CardStatisticsTransactions from 'src/views/ui/cards/statistics/CardStatis
 import ApexLineChart from 'src/views/charts/apex-charts/ApexLineChart'
 import CardAppleWatch from 'src/views/ui/cards/basic/CardAppleWatch'
 
-const url_main = 'http://q-tap-dashboard.technomasrsystems.com'
+const url_main = 'https://qtap-dashboard.qutap.co'
 
 const AnalyticsDashboard = ({ productsData }) => {
   const [tokenQTap, setTokenQTap] = useState(null)
